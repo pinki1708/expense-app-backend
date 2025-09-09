@@ -1,0 +1,80 @@
+Expense App Backend
+This is the backend for an Expense Tracking Application built with Node.js, Express.js, and MySQL using Sequelize ORM. It provides APIs for user authentication, expense management, categories, budgeting, and file uploads.
+
+Features
+User registration and login with JWT authentication
+
+Create, read, update, delete (CRUD) operations for expenses
+
+Manage categories for expenses
+
+Set and manage monthly budgets
+
+Upload receipts (file upload support planned)
+
+Secure password storage with bcrypt
+
+Structured API routes for modular development
+
+Tech Stack
+Node.js
+
+Express.js
+
+MySQL with Sequelize ORM
+
+JSON Web Tokens (JWT)
+
+bcrypt
+
+multer (for file uploads)
+
+Joi (for request validation)
+
+Getting Started
+Prerequisites
+Node.js installed
+
+MySQL installed and running
+
+Create a MySQL database (e.g., expense_app_db)
+
+Installation
+Clone the repository:
+
+text
+git clone <repository-url>
+Install dependencies:
+
+text
+cd expense-app-backend
+npm install
+Configure database connection in config/database.js with your MySQL credentials.
+
+Start the server:
+
+text
+npm run dev
+The server will run on http://localhost:3000 by default.
+
+API Endpoints
+/api/auth/register: Register a new user
+
+/api/auth/login: Login and get JWT token
+
+/api/expenses: Manage expenses (CRUD) — secured by JWT
+
+/api/categories: Manage categories (CRUD) — secured by JWT
+
+/api/budgets: Manage budgets (CRUD) — secured by JWT
+
+Notes
+Make sure to replace 'your_jwt_secret_key' in your code with a strong secret in production.
+
+File upload feature is planned and can be implemented with multer.
+
+Use environment variables to store sensitive configs (not shown in this starter).
+
+License
+MIT License
+
